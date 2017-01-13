@@ -1,4 +1,5 @@
 .env
+.nyc_output
 deploy.env
 event.json
 event-setup.json
