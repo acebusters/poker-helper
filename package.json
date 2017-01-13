@@ -12,6 +12,7 @@
     "README.md"
   ],
   "scripts": {
+    "check-coverage": "nyc check-coverage --statements 80 --branches 52 --functions 76 --lines 80",
     "watch:test": "npm t -- -w",
     "test": "mocha lib/helper.spec.js --compilers js:babel-register",
     "cover": "nyc npm t",
@@ -21,6 +22,11 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/acebusters/poker-helper.git"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run cover && npm run check-coverage"
+    }
   },
   "author": "Johann Barbie <johannbarbie@me.com> (http://johba.de/)",
   "license": "MIT",
