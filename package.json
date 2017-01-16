@@ -1,6 +1,6 @@
 {
   "name": "poker-helper",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "utility functions for poker",
   "main": "dist/index.js",
   "keywords": [
@@ -12,7 +12,7 @@
     "README.md"
   ],
   "scripts": {
-    "check-coverage": "nyc check-coverage --statements 86 --branches 72 --functions 84 --lines 86",
+    "check-coverage": "nyc check-coverage --statements 87 --branches 72 --functions 85 --lines 87",
     "watch:test": "npm t -- -w",
     "test": "mocha lib/helper.spec.js --compilers js:babel-register",
     "cover": "nyc npm t",
