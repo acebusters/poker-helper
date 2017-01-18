@@ -12,7 +12,7 @@
     "README.md"
   ],
   "scripts": {
-    "check-coverage": "nyc check-coverage --statements 92 --branches 82 --functions 91 --lines 92",
+    "check-coverage": "nyc check-coverage --statements 91 --branches 90 --functions 81 --lines 91",
     "watch:test": "npm t -- -w",
     "test": "mocha lib/helper.spec.js --compilers js:babel-register",
     "cover": "nyc npm t",
@@ -27,6 +27,13 @@
     "ghooks": {
       "pre-commit": "npm run cover && npm run check-coverage"
     }
+  },
+  "nyc": {
+    "exclude": [
+      "**/*.spec.js",
+      "test",
+      "dist"
+    ]
   },
   "author": "Johann Barbie <johannbarbie@me.com> (http://johba.de/)",
   "license": "MIT",
