@@ -1,6 +1,6 @@
 {
   "name": "poker-helper",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "utility functions for poker",
   "main": "dist/index.js",
   "keywords": [
@@ -53,6 +53,8 @@
     "sinon-chai": "^2.8.0"
   },
   "dependencies": {
-    "ethereum-web-token": "^0.1.9"
+    "buffer-shims": "^1.0.0",
+    "ethereum-web-token": "^0.1.9",
+    "ethereumjs-util": "^4.5.0"
   }
 }
