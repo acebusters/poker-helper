@@ -1,6 +1,6 @@
 {
   "name": "poker-helper",
-  "version": "0.1.21",
+  "version": "0.2.6",
   "description": "utility functions for poker",
   "main": "dist/index.js",
   "keywords": [
@@ -14,7 +14,7 @@
   "scripts": {
     "check-coverage": "nyc check-coverage --statements 93 --branches 90 --functions 86 --lines 93",
     "watch:test": "npm t -- -w",
-    "test": "mocha lib/helper.spec.js --compilers js:babel-register",
+    "test": "mocha lib/helper.spec.js lib/receipt.spec.js --compilers js:babel-register",
     "cover": "nyc npm t",
     "prebuild": "rm -rf dist",
     "build": "babel --out-dir dist --ignore *.spec.js lib"
@@ -53,6 +53,8 @@
     "sinon-chai": "^2.8.0"
   },
   "dependencies": {
-    "ethereum-web-token": "^0.1.9"
+    "buffer-shims": "^1.0.0",
+    "ethereum-web-token": "^0.1.9",
+    "ethereumjs-util": "^4.5.0"
   }
 }
