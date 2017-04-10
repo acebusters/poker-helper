@@ -1,5 +1,6 @@
 .env
 .nyc_output
+.idea
 deploy.env
 event.json
 event-setup.json
