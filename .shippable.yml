@@ -13,7 +13,6 @@ script:
 after_success:
   - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
   - echo "//registry.npmjs.org/:email=${NPM_EMAIL}" >> ~/.npmrc
-  - npm publish
   - if [ "$BRANCH" == "master" ] && [ "$PULL_REQUEST" == false ]; then npm publish; fi;
 notifications:
   email:
@@ -21,4 +20,3 @@ notifications:
       - info@acebusters.com
     on_success: change
     on_failure: always
-
