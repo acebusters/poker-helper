@@ -11,8 +11,8 @@ script:
   - npm test
   - npm run build
 after_success:
-  - echo _auth = $NPM_TOKEN > ~/.npmrc
-  - echo email = $NPM_EMAIL >> ~/.npmrc
+  - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+  - echo "//registry.npmjs.org/:email=${NPM_EMAIL}" >> ~/.npmrc
   - npm publish
   - if [ "$BRANCH" == "master" ] && [ "$PULL_REQUEST" == false ]; then npm publish; fi;
 notifications:
