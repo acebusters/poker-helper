@@ -12,8 +12,10 @@
     "README.md"
   ],
   "scripts": {
+    "lint": "npm run lint:js",
+    "lint:eslint": "eslint --fix --ignore-path .gitignore --ignore-pattern internals/scripts",
+    "lint:js": "npm run lint:eslint -- . ",
     "check-coverage": "nyc check-coverage --statements 93 --branches 90 --functions 86 --lines 93",
-    "watch:test": "npm t -- -w",
     "test": "mocha lib/helper.spec.js --compilers js:babel-register",
     "cover": "nyc npm t",
     "prebuild": "rm -rf dist",
@@ -47,6 +49,9 @@
     "babel-register": "^6.18.0",
     "babel-runtime": "^6.9.2",
     "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-plugin-import": "^2.2.0",
     "mocha": "^3.0.0-1",
     "nyc": "^10.0.0",
     "sinon": "^1.17.4",
@@ -55,6 +60,7 @@
   },
   "dependencies": {
     "buffer-shims": "^1.0.0",
+    "es6-promise": "^4.1.0",
     "ethereum-web-token": "^0.1.9",
     "ethereumjs-util": "^4.5.0"
   }
