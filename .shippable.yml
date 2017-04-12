@@ -1,0 +1,24 @@
+language: node_js
+env:
+  global:
+    - secure: 2tqcSUKEK0NyOyWW2hi3OLnzwMlU1SzUewLmFGAg+2npsjon2O5VtyILI7bz2IXejhocVFe80il0GGn7kvY/fhx3HXeJyfNa3PNYAvWSxnDpctt0qJHzLwaZmTVFQPgIoeqFntL8vRymBgE251BcFQQ7zL7v3oUoIzHk5DRIDxGjiztRl1GO/rQ8hMn1ef+Cg6vvf5odUmayaUP0ieGJRMUHoOI6pXJ+I0RsOoRm+gBAKMqkFb9++ly3AAtE1QzPFEkaxkpje9Jr7zze/QcgM1ThQ0m4KhQE8H3lkvXo8bY2PBPxvnrHS3Yg7Zd/5SDUnsxgnitSYL/QYf/xquyVuA==
+    -  NPM_EMAIL=johannbarbie@me.com
+node_js:
+  - 7.4.0
+before_script:
+  - npm install
+script:
+  - npm test
+  - npm run build
+after_success:
+  - echo _auth = $NPM_TOKEN > ~/.npmrc
+  - echo email = $NPM_EMAIL >> ~/.npmrc
+  - npm publish
+  - if [ "$BRANCH" == "master" ] && [ "$PULL_REQUEST" == false ]; then npm publish; fi;
+notifications:
+  email:
+    recipients:
+      - info@acebusters.com
+    on_success: change
+    on_failure: always
+
