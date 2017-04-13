@@ -16,7 +16,7 @@
     "lint:eslint": "eslint --fix --ignore-path .gitignore --ignore-pattern internals/scripts",
     "lint:js": "npm run lint:eslint -- . ",
     "check-coverage": "nyc check-coverage --statements 93 --branches 90 --functions 86 --lines 93",
-    "test": "mocha lib/helper.spec.js --compilers js:babel-register",
+    "test": "mocha lib/*.spec.js --compilers js:babel-register",
     "cover": "nyc npm t",
     "prebuild": "rm -rf dist",
     "build": "babel --out-dir dist --ignore *.spec.js lib"
