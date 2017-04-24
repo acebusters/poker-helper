@@ -60,7 +60,6 @@
     "utf8": "^2.1.2"
   },
   "dependencies": {
-    "buffer-shims": "^1.0.0",
     "es6-promise": "^4.1.0",
     "ethereum-web-token": "^0.1.9",
     "ab-pokersolver": "^2.1.3",
