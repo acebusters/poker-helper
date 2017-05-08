@@ -60,9 +60,10 @@
     "utf8": "^2.1.2"
   },
   "dependencies": {
+    "ab-pokersolver": "^2.1.3",
+    "bignumber.js": "^4.0.2",
     "es6-promise": "^4.1.0",
     "ethereum-web-token": "^0.1.9",
-    "ab-pokersolver": "^2.1.3",
     "ethereumjs-util": "^4.5.0"
   }
 }
