@@ -1,6 +1,6 @@
 {
   "name": "poker-helper",
-  "version": "0.6.0",
+  "version": "0.6.2",
   "description": "utility functions for poker",
   "main": "dist/index.js",
   "keywords": [
