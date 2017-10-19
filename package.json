@@ -1,6 +1,6 @@
 {
   "name": "poker-helper",
-  "version": "0.6.8",
+  "version": "0.6.9",
   "description": "utility functions for poker",
   "main": "dist/index.js",
   "keywords": [
@@ -17,7 +17,7 @@
     "lint:js": "npm run lint:eslint -- . ",
     "check-coverage": "nyc check-coverage --statements 93 --branches 90 --functions 86 --lines 93",
     "test": "mocha lib/*.spec.js --compilers js:babel-register",
-    "cover": "nyc npm t",
+    "cover": "nyc --reporter=lcov npm t",
     "prebuild": "rm -rf dist",
     "build": "babel --out-dir dist --ignore *.spec.js lib"
   },
@@ -54,7 +54,7 @@
     "eslint-config-airbnb-base": "^11.1.3",
     "eslint-plugin-import": "^2.2.0",
     "mocha": "^3.0.0-1",
-    "nyc": "^10.0.0",
+    "nyc": "^11.2.1",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
     "utf8": "^2.1.2"
