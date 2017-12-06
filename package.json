@@ -1,10 +1,11 @@
 {
   "name": "poker-helper",
-  "version": "0.6.10",
+  "version": "7.0.0",
   "description": "utility functions for poker",
   "main": "dist/index.js",
   "keywords": [
     "acebusters",
+    "poker",
     "Ethereum"
   ],
   "files": [
