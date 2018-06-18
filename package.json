@@ -38,8 +38,8 @@
       "dist"
     ]
   },
-  "author": "Johann Barbie <johannbarbie@me.com> (http://johba.de/)",
-  "license": "MIT",
+  "author": "Parsec Labs (parseclabs.org)",
+  "license": "AGPLv3",
   "devDependencies": {
     "babel-cli": "^6.11.4",
     "babel-core": "^6.10.4",
